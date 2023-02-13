@@ -98,3 +98,10 @@ C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de softwar
 C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\obj\Debug\net5.0\EstacionamentoTeste.pdb
 C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\obj\Debug\net5.0\EstacionamentoTeste.genruntimeconfig.cache
 C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\obj\Debug\net5.0\ref\EstacionamentoTeste.dll
+C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\bin\Debug\net5.0\CoverletSourceRootsMapping
+C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\bin\Debug\net5.0\Alura.Estacionamento.deps.json
+C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\bin\Debug\net5.0\Alura.Estacionamento.runtimeconfig.json
+C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\bin\Debug\net5.0\Alura.Estacionamento.runtimeconfig.dev.json
+C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\bin\Debug\net5.0\Alura.Estacionamento.exe
+C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\bin\Debug\net5.0\Alura.Estacionamento.dll
+C:\Users\Lorena\Documents\c_sharp_studies\Testes\Fundamentos do teste de software\Estacionamento\EstacionamentoTeste\bin\Debug\net5.0\Alura.Estacionamento.pdb

@@ -1808,6 +1808,16 @@
         "build": {
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
+      },
+      "Alura.Estacionamento/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Alura.Estacionamento.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Alura.Estacionamento.dll": {}
+        }
       }
     }
   },
@@ -6103,10 +6113,16 @@
         "xunit.runner.visualstudio.2.4.5.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "Alura.Estacionamento/1.0.0": {
+      "type": "project",
+      "path": "../Alura.Estacionamento/Alura.Estacionamento.csproj",
+      "msbuildProject": "../Alura.Estacionamento/Alura.Estacionamento.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Alura.Estacionamento >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
       "coverlet.collector >= 3.1.2",
       "xunit >= 2.4.2",
@@ -6139,7 +6155,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Lorena\\Documents\\c_sharp_studies\\Testes\\Fundamentos do teste de software\\Estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj": {
+              "projectPath": "C:\\Users\\Lorena\\Documents\\c_sharp_studies\\Testes\\Fundamentos do teste de software\\Estacionamento\\Alura.Estacionamento\\Alura.Estacionamento.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
