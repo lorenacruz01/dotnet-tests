@@ -32,5 +32,29 @@ namespace EstacionamentoTeste
             //Assert
             Assert.Equal(2, faturamento);
         }
+
+        [Theory]
+        [InlineData("José Lima", "ASD-1423", "preto", "Gol")]
+        [InlineData("Maria Silva", "ABC-4567", "branco", "Corolla")]
+        [InlineData("Diego Batista", "DEF-0987", "cinza", "Onix")]
+        public void ValidaFaturamentoVariosVeiculos(string proprietario, string placa, string cor, string modelo)
+        {
+            //Arrange
+            Patio estacionamento = new Patio();
+            Veiculo veiculo = new Veiculo();
+            veiculo.Proprietario = proprietario;
+            veiculo.Placa= placa;
+            veiculo.Cor = cor;
+            veiculo.Modelo = modelo;
+
+            estacionamento.RegistrarEntradaVeiculo(veiculo);
+            estacionamento.RegistrarSaidaVeiculo(veiculo.Placa);
+
+            //Act
+            double faturamento = estacionamento.TotalFaturado();
+
+            //Assert
+            Assert.Equal(2, faturamento);
+        }
     }
 }
