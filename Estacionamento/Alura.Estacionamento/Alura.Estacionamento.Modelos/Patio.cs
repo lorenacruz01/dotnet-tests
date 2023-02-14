@@ -124,8 +124,8 @@ namespace Alura.Estacionamento.Modelos
             string ticket = "### Ticket Estacionameno Alura ###" +
                            $">>> Identificador: {identificador}" +
                            $">>> Data/Hora de Entrada: {DateTime.Now}" +
-                           $">>> Placa Veículo: {veiculo.Placa}" +
-                           $">>> Operador: {this.OperadorPatio.Matricula}";
+                           $">>> Placa Veículo: {veiculo.Placa}";// +
+                           //$">>> Operador: {this.OperadorPatio.Matricula}";
             return ticket;
         }
     }

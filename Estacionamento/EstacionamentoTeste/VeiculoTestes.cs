@@ -9,8 +9,11 @@ namespace EstacionamentoTeste
         [Fact]
         public void TestaVeiculoAcelerar()
         {
+            //Arrange
             Veiculo veiculo = new Veiculo();
+            //Act
             veiculo.Acelerar(10);
+            //Assert
             Assert.Equal(100, veiculo.VelocidadeAtual);
         }
 
