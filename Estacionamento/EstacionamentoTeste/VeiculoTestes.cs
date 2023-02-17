@@ -52,6 +52,32 @@ namespace EstacionamentoTeste
             Assert.Contains("Ficha do Veículo:", dados);
         }
 
+        [Fact]
+        public void TestaNomeProprietario()
+        {
+            //Arrange
+            string nomeProprietario = "Ab";
+            //Assert
+            Assert.Throws<FormatException>(
+                //Act
+                () => new Veiculo(nomeProprietario)
+            );
+        }
+
+        [Fact]
+        public void TestaPlaca()
+        {
+            //Arrange
+            string placa = "ascd1234";
+            //Act
+            var msg = Assert.Throws<FormatException>(
+                () => veiculo.Placa = placa
+            );
+            //Assert
+            Assert.Equal("O 4° caractere deve ser um hífen", msg.Message);
+
+        }
+
         public void Dispose()
         {
             SaidaConsole.WriteLine("Dispose foi chamado");
