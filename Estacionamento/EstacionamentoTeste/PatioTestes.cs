@@ -6,17 +6,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace EstacionamentoTeste
 {
-    public class PatioTestes
+    public class PatioTestes : IDisposable
     {
+        private Veiculo veiculo;
+        private Patio estacionamento;
+        public ITestOutputHelper SaidaConsole;
+
+        public PatioTestes(ITestOutputHelper _saidaConsole)
+        {
+            SaidaConsole = _saidaConsole;
+            SaidaConsole.WriteLine("Chamou o construtor");
+            veiculo = new Veiculo();
+            estacionamento= new Patio();
+        }
+
         [Fact]
-        public void ValidaFaturamento()
+        public void ValidaFaturamentoUmVeiculo()
         {
             //Arrange
-            Patio estacionamento = new Patio();
-            Veiculo veiculo = new Veiculo();
             veiculo.Proprietario = "Lorena Cruz";
             veiculo.Tipo = TipoVeiculo.Automovel;
             veiculo.Cor = "Verde";
@@ -40,8 +51,6 @@ namespace EstacionamentoTeste
         public void ValidaFaturamentoVariosVeiculos(string proprietario, string placa, string cor, string modelo)
         {
             //Arrange
-            Patio estacionamento = new Patio();
-            Veiculo veiculo = new Veiculo();
             veiculo.Proprietario = proprietario;
             veiculo.Placa= placa;
             veiculo.Cor = cor;
@@ -55,6 +64,29 @@ namespace EstacionamentoTeste
 
             //Assert
             Assert.Equal(2, faturamento);
+        }
+        [Theory]
+        [InlineData("José Lima", "ASD-1423", "preto", "Gol")]
+        public void ValidaLocalizaVeiculoNoPatio(string proprietario, string placa, string cor, string modelo)
+        {
+            //Arrange
+            veiculo.Proprietario = proprietario;
+            veiculo.Placa = placa;
+            veiculo.Cor = cor;
+            veiculo.Modelo = modelo;
+            estacionamento.RegistrarEntradaVeiculo(veiculo);
+            
+            //Act
+            Veiculo veiculoEncontrado = estacionamento.PesquisaVeiculoPorPlaca(veiculo.Placa);
+
+            //Assert
+            Assert.Equal(veiculo, veiculoEncontrado);
+
+        }
+
+        public void Dispose()
+        {
+            SaidaConsole.WriteLine("Dispose foi chamado");
         }
     }
 }
