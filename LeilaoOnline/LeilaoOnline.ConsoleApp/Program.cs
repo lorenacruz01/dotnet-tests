@@ -24,7 +24,7 @@ namespace LeilaoOnline.ConsoleApp // Note: actual namespace depends on the proje
             //Arrange
             Leilao leilao = new Leilao("Van Gogh");
             Interessado cliente1 = new Interessado(1, "Maria Alves", "Rua Imaginária Um, 101. Fortaleza - CE");
-            Interessado cliente2 = new Interessado(1, "Bruna Silva", "Rua Imagináriar Dois, 101. São Paulo - SP");
+            Interessado cliente2 = new Interessado(2, "Bruna Silva", "Rua Imaginária Dois, 101. São Paulo - SP");
 
 
             leilao.RecebeLance(cliente1, 800);
